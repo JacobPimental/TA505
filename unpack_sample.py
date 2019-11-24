@@ -198,7 +198,7 @@ if __name__ == '__main__':
     encrypted_data = bytes(r2.cmdj('pxj 0x3c870 @ 0x10005238'))
 
     compressed_data = compress_data(encrypted_data)
-    unencrypted = dword_decrypt(encrypted_data, 0x4178)
+    unencrypted = dword_decrypt(compressed_data, 0x4178)
 
     f = open("out2.bin", 'wb')
     f.write(unencrypted)
